@@ -11,9 +11,9 @@ public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRe;
     private final DiscountPolicy discount;
 
-    public OrderServiceImpl(MemberRepository memberRe, DiscountPolicy discount) {
-        this.memberRe = memberRe;
-        this.discount = discount;
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRe = memberRepository;
+        this.discount = discountPolicy;
     }
 
     @Override
@@ -23,5 +23,9 @@ public class OrderServiceImpl implements OrderService{
 
 
         return new Order(memberId,itemName,itemPrice,discountPRice);
+    }
+    //테스트용
+    public MemberRepository getMemberRe(){
+        return memberRe;
     }
 }
