@@ -30,10 +30,8 @@ public class AppConfig {// 중앙 처리장치
     @Bean
     public OrderService orderService() {
         System.out.println("AppConfig.orderService");
-        return new OrderServiceImpl(
-                memberRepository()
-                , discountPolicy()
-        );
+      //  return new OrderServiceImpl(memberRepository(),discountPolicy());
+        return null;
     }
 
     @Bean

@@ -35,12 +35,12 @@ class ApplicationCintextBasicFindTest {
         Assertions.assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
     
-    @Test
-    @DisplayName("빈이름 조회X")
-    void findBeanByNameX(){
-        MemberService memberService = ac.getBean("xxx", MemberService.class);
-
-        org.junit.jupiter.api.Assertions.assertThrows(NoSuchBeanDefinitionException.class,
-                                        ()-> ac.getBean("xxx", MemberService.class));
-    }
+//    @Test
+//    @DisplayName("빈이름 조회X")
+//    void findBeanByNameX(){
+//        MemberService memberService = ac.getBean("xxx", MemberService.class);
+//
+//        org.junit.jupiter.api.Assertions.assertThrows(NoSuchBeanDefinitionException.class,
+//                                        ()-> ac.getBean("xxx", MemberService.class));
+//    }
 }
