@@ -1,16 +1,20 @@
 package hello.core.discount;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.member.Grade;
 import hello.core.member.Member;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.stereotype.Component;
 
 import java.lang.annotation.RetentionPolicy;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+@Component
+@MainDiscountPolicy
 class RateDiscountPolicyTest {
 
     RateDiscountPolicy discountPolicy =new RateDiscountPolicy();
